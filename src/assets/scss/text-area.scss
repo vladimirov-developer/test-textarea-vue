@@ -1,0 +1,105 @@
+$roboto-font-path: "../fonts/roboto";
+
+@font-face {
+  src: url("#{$roboto-font-path}/Roboto-Regular.ttf");
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("#{$roboto-font-path}/Roboto-Medium.ttf");
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url("#{$roboto-font-path}/Roboto-Bold.ttf");
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+
+body * {
+  font-family: 'Roboto' !important;
+}
+
+.textarea {
+  position: relative;
+  padding: 208px 77px;
+}
+
+.textarea__label {
+  font-weight: 500;
+  font-size: 18px;
+  display: block;
+  color: #303030;
+}
+
+.textarea__field {
+  width: 326px;
+  height: 146px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  color: #4F4F4F;
+  box-sizing: border-box;
+  resize: none;
+ 
+
+  &:focus {
+    outline: none;
+    cursor: text;
+    padding: 0px 12px;
+  }
+
+  &:not(:focus):valid {
+    padding: 0px 12px;
+  }
+}
+
+.textarea--error {
+  background-color: #FBF0EF !important;
+}
+
+.textarea__error-text {
+  color: #D6675C;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.loading {    
+  background-image: url("../../../public/images/loader.gif");
+  background-size:18px 18px;
+  background-position: right 5px top 5px;
+  background-repeat: no-repeat;
+}
+
+.textarea__wrapper {
+  position: relative;
+  margin-top: 8px;
+  background-color: #f0f0f0;
+  padding: 24px 0px;
+  width: 326px;
+  border-radius: 8px;
+}
+
+.textarea__placeholder {
+  position: absolute;
+  pointer-events: none;
+  left: 12px;
+  top: 4px;
+  transition: 0.2s ease all;
+  color: #878F97;
+}
+
+.textarea__field:focus ~ .textarea__placeholder {
+  top: 4px;
+  left: 12px;
+  bottom: 10px;
+  font-size: 11px;
+  line-height: 12px;
+  opacity: 1;
+}
+
